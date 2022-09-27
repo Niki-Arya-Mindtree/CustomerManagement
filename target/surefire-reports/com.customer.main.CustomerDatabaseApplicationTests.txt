@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.customer.main.CustomerDatabaseApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.781 s - in com.customer.main.CustomerDatabaseApplicationTests
