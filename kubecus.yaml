@@ -5,7 +5,7 @@ metadata:
   labels:
     app: cus-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: cus-app
@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: cus-app
-        image: nikiarya/cusmanagement:1.0
+        image: nikiarya/cusmanagement:1.1
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8045
+        - containerPort: 80
 
 
 ---
@@ -28,10 +28,10 @@ kind: Service
 metadata:
   name: cus-server
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: cus-app
   ports:
     - protocol: TCP
-      port: 8045
-      targetPort: 8045
+      port: 80
+      targetPort: 80
